@@ -1,5 +1,4 @@
 ;;; man-posframe.el -*- lexical-binding: t; -*-
-
 (require 'man)
 (require 'posframe)
 
@@ -37,7 +36,7 @@
   )
 
 (defcustom man-posframe-width nil
-  "man-posframe height"
+  "man-posframe width"
   :type 'number
   :group 'man-posframe
   )
@@ -78,7 +77,7 @@
            :height man-posframe-height :min-height man-posframe-height
            :width man-posframe-height :min-width man-posframe-width
            :parameters man-posframe-parameters
-           :border-color (face-attribute 'vertico-posframe-border :background)
+           :border-color (face-attribute 'man-posframe-border :background)
            :border-width 2
            ))
 
@@ -95,9 +94,13 @@
 
 (defun man-posframe-close ()
   (interactive)
+
   (posframe-hide man-posframe--buffer)
+  ;; NOTE if you override this function
+  ;; you need to set this variable to nil
   (setq man-posframe--frame nil)
   )
+
 
 (defun man-posframe-scroll-down ()
   (interactive)
