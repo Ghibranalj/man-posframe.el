@@ -80,7 +80,7 @@
   (interactive "sTopic: ")
 
   (if man-posframe--buffer
-      (posframe-hide man-posframe--buffer)f)
+      (posframe-hide man-posframe--buffer))
 
   (let ((prefnotify Man-notify-method)
         (ignored (setq Man-notify-method 'quiet))
@@ -95,8 +95,7 @@
            :width man-posframe-height :min-width man-posframe-width
            :parameters man-posframe-parameters
            :border-color (face-attribute 'man-posframe-border :background)
-           :border-width man-posframe-border-width
-           ))
+           :border-width man-posframe-border-width))
     ;; set keymap until frame is closed
     (set-transient-map man-posframe-keymap
                        (lambda () man-posframe--frame)

@@ -19,8 +19,7 @@ View man pages on a popup frame using posframe
   :ensure t
   :custom
   (man-posframe-width  100)
-  (man-posframe-height  30)
-  )
+  (man-posframe-height  30))
 ```
 ### Doom emacs
 in `packages.el`
@@ -34,8 +33,7 @@ in `config.el`
 (use-package! man-posframe
   :custom
   (man-posframe-width  100)
-  (man-posframe-height  30)
-  )
+  (man-posframe-height  30))
 
 ```
 
